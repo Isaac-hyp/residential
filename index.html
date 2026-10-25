@@ -1,0 +1,747 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProxyGlid · Premium proxies</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #f9fafc;
+      color: #1e1e2f;
+      line-height: 1.5;
+    }
+
+    /* smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---------- HEADER ---------- */
+    header {
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+      padding: 16px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.92);
+      border-bottom: 1px solid #eef0f5;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #2a2a72, #0a0a2a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .logo i {
+      background: linear-gradient(135deg, #3b3b98, #1a1a3a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-size: 26px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-weight: 500;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #2d3a5e;
+      font-size: 15px;
+      transition: 0.2s;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    .nav-links a:hover {
+      color: #0d0d1a;
+      border-bottom-color: #3b3b98;
+    }
+
+    .cart-icon {
+      background: #eef1ff;
+      padding: 8px 14px;
+      border-radius: 40px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #1e1e5e;
+      transition: 0.2s;
+      cursor: default;
+    }
+
+    .cart-icon i {
+      font-size: 16px;
+    }
+
+    /* ---------- MAIN ---------- */
+    main {
+      padding: 40px 0 60px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1 1 300px;
+    }
+
+    .hero-badge {
+      background: #e9eaff;
+      color: #2a2a72;
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      margin-bottom: 16px;
+    }
+
+    .hero-content h1 {
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
+      color: #0a0a1a;
+    }
+
+    .hero-content p {
+      font-size: 18px;
+      color: #4b4b6b;
+      max-width: 500px;
+      margin-bottom: 24px;
+    }
+
+    .hero-price-tag {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 24px;
+      font-weight: 700;
+      background: #ffffff;
+      padding: 10px 22px;
+      border-radius: 60px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.03);
+      width: fit-content;
+      border: 1px solid #e2e5f0;
+    }
+
+    .hero-price-tag i {
+      color: #2a2a72;
+    }
+
+    .hero-price-tag span {
+      color: #0a0a1a;
+    }
+
+    .hero-price-tag .small {
+      font-size: 15px;
+      font-weight: 500;
+      color: #5d5d7a;
+      margin-left: 6px;
+    }
+
+    .hero-illustration {
+      flex: 0 0 300px;
+      background: linear-gradient(145deg, #f0f2ff, #ffffff);
+      border-radius: 36px;
+      padding: 30px 24px;
+      box-shadow: 0 20px 30px -10px rgba(42, 42, 114, 0.1);
+      border: 1px solid #e4e7f2;
+      text-align: center;
+    }
+
+    .hero-illustration i {
+      font-size: 80px;
+      background: linear-gradient(135deg, #2a2a72, #5b5b9e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+
+    .hero-illustration .tagline {
+      font-weight: 600;
+      color: #2d2d52;
+      font-size: 16px;
+    }
+
+    /* PRODUCT SECTION */
+    .section-header {
+      margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+      color: #0a0a1a;
+    }
+
+    .section-header p {
+      color: #5d5d7a;
+      font-size: 16px;
+    }
+
+    /* product cards */
+    .plans-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .plan-card {
+      flex: 1 1 260px;
+      max-width: 320px;
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 32px 24px;
+      box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.05);
+      border: 1px solid #edf0f8;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 40px -12px rgba(42, 42, 114, 0.15);
+      border-color: #dadef0;
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      background: #e9eaff;
+      padding: 4px 12px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #2a2a72;
+    }
+
+    .plan-icon {
+      font-size: 34px;
+      color: #2a2a72;
+      margin-bottom: 18px;
+    }
+
+    .plan-name {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #0a0a1a;
+    }
+
+    .plan-description {
+      color: #5f5f7a;
+      font-size: 14px;
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+
+    .plan-price {
+      font-size: 36px;
+      font-weight: 800;
+      color: #0a0a1a;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .plan-price span {
+      font-size: 16px;
+      font-weight: 500;
+      color: #5f5f7a;
+    }
+
+    .features {
+      list-style: none;
+      margin-bottom: 30px;
+      flex: 1;
+    }
+
+    .features li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      padding: 6px 0;
+      color: #2d2d4a;
+    }
+
+    .features i {
+      color: #3b3b98;
+      font-size: 14px;
+      width: 18px;
+    }
+
+    .btn-buy {
+      background: #2a2a72;
+      color: #ffffff;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.25s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 6px;
+      border: 1px solid #2a2a72;
+    }
+
+    .btn-buy:hover {
+      background: #1b1b4b;
+      border-color: #1b1b4b;
+      box-shadow: 0 8px 18px -6px #2a2a7240;
+    }
+
+    .btn-buy i {
+      font-size: 14px;
+    }
+
+    /* Payment / Money number section */
+    .payment-section {
+      margin: 70px 0 40px;
+      background: #ffffff;
+      border-radius: 40px;
+      padding: 36px 40px;
+      box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.04);
+      border: 1px solid #eef0f8;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .payment-info {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .payment-icon {
+      background: #e9eaff;
+      width: 64px;
+      height: 64px;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      color: #2a2a72;
+    }
+
+    .payment-details h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #2d2d4a;
+      margin-bottom: 6px;
+    }
+
+    .payment-number {
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #0a0a1a;
+      background: #f5f7ff;
+      padding: 4px 18px;
+      border-radius: 60px;
+      border: 1px solid #d9ddf0;
+      display: inline-block;
+    }
+
+    .payment-note {
+      color: #5d5d7a;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .payment-note i {
+      margin-right: 6px;
+      color: #2a2a72;
+    }
+
+    .secure-badge {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #f5f7ff;
+      padding: 12px 22px;
+      border-radius: 60px;
+      font-weight: 500;
+      color: #2d2d52;
+    }
+
+    .secure-badge i {
+      font-size: 22px;
+      color: #2a2a72;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      border-top: 1px solid #e2e5f0;
+      padding: 40px 0;
+      margin-top: 40px;
+      background: #ffffff;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-copy {
+      color: #6a6a8a;
+      font-size: 14px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #3d3d5e;
+      font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #0a0a1a;
+    }
+
+    /* ---------- MODAL (simple alert replacement) ---------- */
+    .toast-message {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) scale(0.95);
+      background: #1e1e3a;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 16px;
+      box-shadow: 0 18px 30px -8px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.25s ease;
+      z-index: 1000;
+      white-space: nowrap;
+      border: 1px solid #3b3b98;
+    }
+
+    .toast-message.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) scale(1);
+    }
+
+    /* responsive */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 36px;
+      }
+      .hero {
+        margin-bottom: 40px;
+      }
+      .payment-section {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .payment-info {
+        width: 100%;
+      }
+      .payment-number {
+        font-size: 26px;
+      }
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 16px;
+      }
+      .plan-card {
+        max-width: 100%;
+      }
+      .payment-number {
+        font-size: 22px;
+        padding: 4px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <div class="logo">
+        <i class="fas fa-shield-haltered"></i> ProxyGlid
+      </div>
+      <div class="nav-links">
+        <a href="#plans">Proxies</a>
+        <a href="#payment">Payment</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="cart-icon">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Cart (0)</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-bolt"></i> High-speed · Private · Reliable
+          </div>
+          <h1>Browse without<br>boundaries.</h1>
+          <p>ProxyGlid delivers premium residential & datacenter proxies. Pay once, stay anonymous. Instant activation.</p>
+          <div class="hero-price-tag">
+            <i class="fas fa-tag"></i>
+            <span>$35 – $45</span>
+            <span class="small">per proxy</span>
+          </div>
+        </div>
+        <div class="hero-illustration">
+          <i class="fas fa-globe"></i>
+          <div class="tagline">global network · 99.9% uptime</div>
+        </div>
+      </section>
+
+      <!-- PLANS / PRODUCTS -->
+      <section id="plans">
+        <div class="section-header">
+          <h2>Choose your proxy</h2>
+          <p>All proxies include unlimited bandwidth, authentication, and 24/7 support.</p>
+        </div>
+        <div class="plans-grid">
+          <!-- Basic Plan -->
+          <div class="plan-card">
+            <div class="plan-badge">POPULAR</div>
+            <div class="plan-icon"><i class="fas fa-server"></i></div>
+            <div class="plan-name">Starter</div>
+            <div class="plan-description">Single datacenter proxy, perfect for scraping & browsing.</div>
+            <div class="plan-price">$35 <span>/ proxy</span></div>
+            <ul class="features">
+              <li><i class="fas fa-check-circle"></i> 1 static IP</li>
+              <li><i class="fas fa-check-circle"></i> 10 GB bandwidth</li>
+              <li><i class="fas fa-check-circle"></i> US / EU locations</li>
+              <li><i class="fas fa-check-circle"></i> Instant setup</li>
+            </ul>
+            <button class="btn-buy" data-plan="Starter" data-price="35">
+              <i class="fas fa-shopping-cart"></i> Buy now
+            </button>
+          </div>
+
+          <!-- Pro Plan -->
+          <div class="plan-card">
+            <div class="plan-icon"><i class="fas fa-rocket"></i></div>
+            <div class="plan-name">Professional</div>
+            <div class="plan-description">High-performance residential proxy, ideal for automation.</div>
+            <div class="plan-price">$40 <span>/ proxy</span></div>
+            <ul class="features">
+              <li><i class="fas fa-check-circle"></i> 1 residential IP</li>
+              <li><i class="fas fa-check-circle"></i> 50 GB bandwidth</li>
+              <li><i class="fas fa-check-circle"></i> Global rotation</li>
+              <li><i class="fas fa-check-circle"></i> Priority support</li>
+            </ul>
+            <button class="btn-buy" data-plan="Professional" data-price="40">
+              <i class="fas fa-shopping-cart"></i> Buy now
+            </button>
+          </div>
+
+          <!-- Enterprise Plan -->
+          <div class="plan-card">
+            <div class="plan-icon"><i class="fas fa-crown"></i></div>
+            <div class="plan-name">Enterprise</div>
+            <div class="plan-description">Dedicated premium proxy with maximum speed & privacy.</div>
+            <div class="plan-price">$45 <span>/ proxy</span></div>
+            <ul class="features">
+              <li><i class="fas fa-check-circle"></i> Dedicated IP</li>
+              <li><i class="fas fa-check-circle"></i> Unlimited bandwidth</li>
+              <li><i class="fas fa-check-circle"></i> 24/7 dedicated support</li>
+              <li><i class="fas fa-check-circle"></i> SLA 99.99%</li>
+            </ul>
+            <button class="btn-buy" data-plan="Enterprise" data-price="45">
+              <i class="fas fa-shopping-cart"></i> Buy now
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PAYMENT / MONEY NUMBER SECTION -->
+      <section id="payment">
+        <div class="payment-section">
+          <div class="payment-info">
+            <div class="payment-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <div class="payment-details">
+              <h3>Send payment to</h3>
+              <div class="payment-number">0111213264</div>
+              <div class="payment-note">
+                <i class="fas fa-info-circle"></i> Use this number for mobile money / bank transfer. Include your email in the reference.
+              </div>
+            </div>
+          </div>
+          <div class="secure-badge">
+            <i class="fas fa-lock"></i>
+            <span>Secure & encrypted</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- optional small FAQ / trust (extra ux) -->
+      <section id="faq" style="margin-top: 40px;">
+        <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: space-between;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <i class="fas fa-check-circle" style="color: #2a2a72; font-size: 22px;"></i>
+            <span style="font-weight: 500; color: #2d2d4a;">Instant activation</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <i class="fas fa-headset" style="color: #2a2a72; font-size: 22px;"></i>
+            <span style="font-weight: 500; color: #2d2d4a;">24/7 support</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <i class="fas fa-undo-alt" style="color: #2a2a72; font-size: 22px;"></i>
+            <span style="font-weight: 500; color: #2d2d4a;">7-day money back</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-copy">
+        © 2025 ProxyGlid. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- toast message -->
+  <div id="toast" class="toast-message">Purchase simulated — thank you!</div>
+
+  <!-- simple JS for buy buttons and toast -->
+  <script>
+    (function() {
+      const toast = document.getElementById('toast');
+      const buttons = document.querySelectorAll('.btn-buy');
+
+      function showToast(message) {
+        toast.textContent = message;
+        toast.classList.add('show');
+        setTimeout(() => {
+          toast.classList.remove('show');
+        }, 2600);
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+          e.preventDefault();
+          const plan = this.getAttribute('data-plan') || 'proxy';
+          const price = this.getAttribute('data-price') || '35';
+          
+          // Simulate purchase – in a real site this would go to checkout.
+          // We clearly show the payment number and price.
+          showToast(`✅ ${plan} proxy · $${price} — pay to 0111213264`);
+
+          // Also update cart counter (just for UX demonstration)
+          const cartSpan = document.querySelector('.cart-icon span');
+          if (cartSpan) {
+            let current = cartSpan.textContent.match(/\d+/)?.[0] || '0';
+            let count = parseInt(current, 10) + 1;
+            cartSpan.textContent = `Cart (${count})`;
+          }
+        });
+      });
+
+      // smooth scroll for anchor links is enabled in CSS.
+      // optional hover effect for nav
+    })();
+  </script>
+</body>
+</html>
